@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+table{
+	border: 1px solid black;
+	margin: 0 auto;
+	border-collapse: collapse;
+	text-align: center;
+}
+td img{
+	height: 300px;
+}
+
+td{
+	border: 1px solid black;
+}

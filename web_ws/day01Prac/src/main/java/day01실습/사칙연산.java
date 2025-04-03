@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/calculate")
+@WebServlet("/calculated")
 public class 사칙연산 extends HttpServlet {
 
 	@Override
