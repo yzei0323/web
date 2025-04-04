@@ -1,4 +1,4 @@
-package day1Prac;
+package 발표;
 
 import java.io.IOException;
 import java.io.PrintWriter;
