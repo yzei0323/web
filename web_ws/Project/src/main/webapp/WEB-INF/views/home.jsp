@@ -4,12 +4,142 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="css/home.css" rel="stylesheet">
+<title>에이콘도서관</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+    *{
+      font-family: "Noto Sans KR", serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .wrap {
+      width: 100%;
+      height: 100%; 
+      background-image: url("https://images.unsplash.com/photo-1529148482759-b35b25c5f217?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-position: center;
+      background-size: cover;
+
+      position: relative;
+    }
+
+    .wrap::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      opacity: 0.6;
+      z-index: 1; 
+    }
+
+    .content {
+      width: 850px;
+      height: 490px;
+      position: relative;
+      z-index: 2;
+      background-color: rgb(255,255,255, 0.6);
+      margin: 0 auto;
+      transform: translateY(30%);
+      border-radius: 20px;
+     }
+
+
+    .title{
+      width: 600px; 
+      /*border: 1px solid black;*/
+      text-align: center;
+      position:absolute;
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .title h1{
+      font-size: 60px;
+      font-weight: 900;
+    }
+    .title p{
+     font-size: 24px;
+     margin: 0;
+    }
+
+    .search{
+      /*border: 1px solid black;*/
+      width: 750px;
+      position: absolute;
+      left: 50%;
+      bottom: 25%;
+      transform: translateX(-50%);
+    }
+    .search-bar{
+      background-color: white;
+      width: 650px;
+      height: 80px;
+      line-height: 85px;
+      border:2px solid rgb(165,165,165);
+      border-radius: 40px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .search-bar input{
+      width: 450px;
+      border: 0px;
+      font-size: 24px;
+      outline: 0px;
+    }
+    .search_btn {
+      width: 40px;
+      height: 40px;
+      border: 0;
+      background: url(https://cdn-icons-png.flaticon.com/512/107/107122.png);
+      background-size:cover;
+      background-position: center;
+      cursor: pointer;
+      transform: translate(35px,10px);
+    }
+
+    .member{
+      /*border: 1px solid black;*/
+      text-align: center;
+      width: 300px;
+      font-size: 20px;
+      z-index: 5;
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+      transform: translate(-50%);
+    }
+
+    .member ul{
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+
+    }
+    .member li{
+      margin: 0 10px;
+    }
+    .member a{
+      text-decoration: none;
+      color: black;
+    }
+</style>
 </head>
 <body>
 
-<div class="wrap">
+ <div class="wrap">
+
     <div class="content">
       <div class="title">
         <h1>에이콘 도서관</h1>
@@ -17,13 +147,20 @@
       </div>
       <div class="search">
         <div class="search-bar">
-          <input type="text">
-          <button class="search_btn"></button>
+         <form action ="search" method="get">
+          <input type="text" name ="search" placeholder = "검색을 원하시는 책의 이름을 입력해 주세요">
+          <button class="search_btn" type ="submit"></button>
+         </form>
         </div>
+      </div>
+      <div class="member">
+        <ul>
+          <li><a href="/Project/memberList">회원조회</a></li>
+          ㅣ
+          <li><a href="/Project/regMember">회원등록</a></li>
       </div>
     </div>
   </div>
-</div>
 
 </body>
 </html>

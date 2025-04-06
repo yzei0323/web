@@ -1,6 +1,7 @@
 package Project;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,8 +20,21 @@ public class MemberHome extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		req.getRequestDispatcher("WEB-INF/views/home.jsp").forward(req, resp);
 		
+		resp.setCharacterEncoding("utf-8");
+    	resp.setContentType("text/html;charset=utf-8");
+    	
+    	Lib_BookDAO b = new Lib_BookDAO();
+        ArrayList<Book> list = null;
+
+        try {
+            list = b.selectAll();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        req.setAttribute("bookinfo", list);
+        req.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(req, resp);
 	
 	}
 	

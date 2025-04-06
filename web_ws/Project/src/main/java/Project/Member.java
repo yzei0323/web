@@ -1,5 +1,7 @@
 package Project;
 
+import java.sql.Date;
+
 public class Member {
 	
 	String M_CODE;
@@ -46,13 +48,13 @@ public class Member {
 		M_RENTAL_LEFT = m_RENTAL_LEFT;
 	}
 	
-	public Member(String m_CODE, String m_NAME, String m_ID, String m_TEL, String m_BIRTHDAY, String m_RENTAL_LEFT) {
+	public Member(String m_CODE, String m_NAME, String m_ID, String m_TEL, String m_birthday, String m_RENTAL_LEFT) {
 		super();
 		M_CODE = m_CODE;
 		M_NAME = m_NAME;
 		M_ID = m_ID;
 		M_TEL = m_TEL;
-		M_BIRTHDAY = m_BIRTHDAY;
+		M_BIRTHDAY = m_birthday;
 		M_RENTAL_LEFT = m_RENTAL_LEFT;
 	}
 	
