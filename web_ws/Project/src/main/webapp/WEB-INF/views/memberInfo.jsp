@@ -119,34 +119,34 @@
 			
 			<tr>
 			<td>회원코드</td>
-			<td><input type="text" name="code" value="<%=member.getM_CODE()%>"></td>
+			<td><input type="text" name="m_code" value="<%=member.getM_CODE()%>"></td>
 			</tr>
 			
 			<tr>
 			<td>이름</td>
-			<td><input type="text" name="name" value="<%=member.getM_NAME()%>"></td>
+			<td><input type="text" name="m_name" value="<%=member.getM_NAME()%>"></td>
 			</tr>
 			
 			<tr>
 			<td>아이디</td>
-			<td><input type="text" name="id" value="<%=member.getM_ID()%>"></td>
+			<td><input type="text" name="m_id" value="<%=member.getM_ID()%>"></td>
 			</tr>
 			
 			<tr>
 			<td>전화번호</td>
-			<td><input type="text" name="tel" value="<%=member.getM_TEL()%>"></td>
+			<td><input type="text" name="m_tel" value="<%=member.getM_TEL()%>"></td>
 			</tr>
 			
 			
 			<tr>
 			<td>생년월일</td>
-			<td><input type="text" name="birth" value="<%=member.getM_BIRTHDAY()%>"></td>
+			<td><input type="text" name="m_birthday" value="<%=member.getM_BIRTHDAY()%>"></td>
 			</tr>
 			
 			
 			<tr>
 			<td>대출가능수량</td>
-			<td><input type="text" name="rental_left" value="<%=member.getM_RENTAL_LEFT()%>"></td>
+			<td><input type="text" name="m_rental_left" value="<%=member.getM_RENTAL_LEFT()%>"></td>
 			</tr>
 			
 			<tr>

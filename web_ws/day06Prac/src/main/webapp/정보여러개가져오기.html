@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+
+function getData(){
+	//alert("fsifjd");
+}
+
+$.ajax({
+	type: "get",
+	url: "/day06Prac/nctList",
+	success: function(sss){
+		
+		let result = document.getElementById("result");
+		
+		let str="<ul>";
+		for(let i=0; i<sss.length; i++){
+			let nctItem = sss[i];
+			console.log("item");
+			console.log(nctItem);
+			
+			str+= "<li>" + nctItem.name+ ", " + nctItem.birthday + "</li>";
+		}
+		str+="</ul>"
+		
+		result.innerHTML = str;
+	},
+	error: function(eee){
+		console.log(eee);
+	}
+});
+</script>
+
+</head>
+<body>
+<div id="result"></div>
+<button onclick=getData()>NCT DREAM 정보 가져오기>,< </button>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>리뷰등록하기</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+
+function regReview(){
+	alert("sdsdf");
+
+	//화면의 리뷰등록내용을 json 객체로 만들기
+	
+	let reviewJson = {id: "6", content: "향 굿 Good~"};
+	let reviewStr = JSON.stringify(reviewJson);
+	
+	//$.ajax();
+	$.ajax({
+		type : "post",
+		url : "/day06Prac/regReview",
+		contentType: "application/json",
+		data : reviewStr, 
+		success : function(data){
+			console.log(data);
+		},
+		error: function(err){
+			console.log(err);
+		}
+	});
+}
+
+</script>
+
+</head>
+<body>
+<button onclick="regReview()">등록하기</button>
+</body>
+</html>

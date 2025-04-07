@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 //모델 : 테이터베이스 회원 삭제
 //뷰 : 삭제되었다 뷰
 
-@WebServlet("/acornDelete")
+@WebServlet("/memberDelete")
 public class MemberDeleteServlet extends HttpServlet {
 
 	@Override

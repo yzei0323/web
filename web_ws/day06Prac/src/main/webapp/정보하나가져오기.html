@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+function getData(){
+	//alert("sjfkdjsdof");
+	
+	
+	$.ajax( {
+		type: "get",
+		url: "/day06Prac/nctInfo",
+		success: function(sss){
+			console.log(sss);
+			
+			//화면에 나타내기
+			let result =document.getElementById("result");
+			result.innerHTML = sss.name+ " " +sss.birthday;
+		},
+		error: function(eee){
+			alert("실패");
+			console.log(eee);
+		}
+	});
+}
+</script>
+
+
+</head>
+<body>
+<div id="result"></div>
+<button onclick="getData()"> 말랑야웅이 </button>
+</body>
+</html>
