@@ -1,4 +1,4 @@
-package restApi;
+package review;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,6 +23,11 @@ public class UpdateReview  extends HttpServlet{
 	@Override
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	 
+		
+		request.setCharacterEncoding("UTF-8");
+		
+		
+		
 		PrintWriter out  = response.getWriter();
  		
 		

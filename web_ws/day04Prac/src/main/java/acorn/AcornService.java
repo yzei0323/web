@@ -17,7 +17,7 @@ public class AcornService {
 	}
 	
 	
-	//
+	//전체 조회하기
 	public ArrayList<Acorn> getMemberList(){
 		
 		ArrayList<Acorn> list = dao.selectAll(); //전체 다 가져오기
@@ -27,7 +27,7 @@ public class AcornService {
 	
 	
 	
-	//
+	//하나 조회하기
 	public Acorn getMemberInfo(String id) {
 		
 		Acorn acorn = dao.selectOne(id); 
