@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/main")
+@WebServlet("/main22")
 public class MainServlet  extends HttpServlet{
 	
 	@Override
