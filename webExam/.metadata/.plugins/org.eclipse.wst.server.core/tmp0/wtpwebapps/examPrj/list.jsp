@@ -1,0 +1,39 @@
+<%@page import="examPrj.Actor"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배우목록</title>
+<link href="actor.css" rel="stylesheet">
+</head>
+<body>
+
+<% ArrayList<Actor> list = (ArrayList<Actor>)request.getAttribute("actorList"); %>
+
+
+<h2>배우목록</h2>
+<table>
+	<tr>
+	<td>ActorId</td>
+	<td>FirstName</td>
+	<td>LastName</td>
+	<td>Gender</td>
+	</tr>
+	
+	
+<% for(Actor actor : list) { %>
+	<tr>
+	<td><%=actor.getActor_id() %></td>
+	<td><%=actor.getFirst_name() %></td>
+	<td><%=actor.getLast_name() %></td>
+	<td><%=actor.getGender() %></td>
+	</tr>
+	<%} %>
+
+</table>
+
+</body>
+</html>

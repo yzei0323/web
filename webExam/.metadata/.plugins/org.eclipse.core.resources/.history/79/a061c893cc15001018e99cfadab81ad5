@@ -1,0 +1,10 @@
+package examPrj;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+
+@WebServlet("/actor")
+public class ActorsController extends HttpServlet{
+
+}

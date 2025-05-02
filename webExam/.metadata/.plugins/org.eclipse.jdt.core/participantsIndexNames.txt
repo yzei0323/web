@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+C:\Users\user\Desktop\webExam\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\353480167.index
+\examPrj\src\main\java
+C:\Users\user\Desktop\webExam\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1423331075.index
+\examPrj\src\main\java
